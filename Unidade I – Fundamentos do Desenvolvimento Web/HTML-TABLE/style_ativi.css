@@ -1,0 +1,28 @@
+body {
+    background-color: #87CEEB;
+}
+h1 {
+    color:darkblue;
+    text-align:center;
+    font-size:40px;
+}
+h2, p {
+    color: black;
+}
+table {
+    width: 60%;
+    margin: 20px auto;
+    background-color: white;
+    border-collapse: collapse;
+}
+th {
+    background-color: darkblue;
+    color: white;
+}
+td {
+    text-align: center;
+    padding: 10px
+}
+table, th,td {
+    border: 1px solid black;
+}

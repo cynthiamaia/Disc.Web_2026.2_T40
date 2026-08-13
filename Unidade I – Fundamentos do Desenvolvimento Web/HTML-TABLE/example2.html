@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+</head>
+<body>
+<table>
+        <tr>
+            <th colspan="3"> Dados dos Alunos - Turma A</th>
+        </tr>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Nota</th>
+        </tr>
+        <tr>
+            <td>Ana Souza</td>
+            <td>15</td>
+            <td>9.5</td>
+        </tr>
+        <tr>
+            <td>Carlos Lima</td>
+            <td>16</td>
+            <td>8.0</td>
+        </tr>
+        <tr>
+            <td colspan="3"><b>Média da Turma: 8.75</b></td>
+        </tr>
+    </table>
+
+    <h2>Exemplo de uso de ROWSPAN (mesclar linhas)</h2>
+
+    <table>
+        <tr>
+            <th rowspan="4">2024</th>
+            <th>Mês</th>
+            <th>Vendas (R$)</th>
+        </tr>
+        <tr>
+            <td>Janeiro</td>
+            <td>R$ 15.000</td>
+        </tr>
+        <tr>
+            <td>Fevereiro</td>
+            <td>R$ 22.500</td>
+        </tr>
+        <tr>
+            <td>Março</td>
+            <td>R$ 18.700</td>
+        </tr>
+        <tr>
+            <td colspan="3"><strong>Total do Trimestre: R$ 56.200</strong></td>
+        </tr>
+    </table>
+
+    <h2>Exemplo combinando COLSPAN e ROWSPAN</h2>
+
+    <table>
+        <tr>
+            <th rowspan="3"><br>Disciplinas</th>
+            <th colspan="2">Notas do 1º Bimestre</th>
+            <th colspan="2">Notas do 2º Bimestre</th>
+        </tr>
+        <tr>
+            <th>Prova 1</th>
+            <th>Prova 2</th>
+            <th>Prova 1</th>
+            <th>Prova 2</th>
+        </tr>
+        <tr>
+            <td>8.0</td>
+            <td>9.0</td>
+            <td>7.5</td>
+            <td>8.5</td>
+        </tr>
+        <tr>
+            <th><br>Matemática</th>
+            <td>6.5</td>
+            <td>7.0</td>
+            <td>8.0</td>
+            <td>9.0</td>
+        </tr>
+        <tr>
+            <th><br>Ciências</th>
+            <td>9.0</td>
+            <td>8.5</td>
+            <td>9.5</td>
+            <td>10.0</td>
+        </tr>
+        <tr>
+            <td>
+                Média Geral: 8.3 - Aprovado
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
+
+
+<!--<b> Texto em negrito, sem nenhuma importância extra.
