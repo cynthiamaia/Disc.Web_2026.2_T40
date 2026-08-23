@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+    <h1>Cadastro</h1>
+<form action="#" method="post">
+<div class="campo">
+    <label for="nomeusuario">Nome:</label><br>
+    <!-- Texto descritivo do campo Nome -->
+    <input type="text" id="nomeusuario" name = "nome" required><br><br>
+    <!-- Campo de texto para digitar o nome -->
+ 
+
+    <label for="email">E-mail:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+
+    <label for="senha">Senha:</label><br>
+    <input type="password" id="senha" name="senha" required><br><br>
+
+
+    <label>Curso:</label><br>
+    <select name="curso">
+        <option>ADS</option>
+        <option>CC</option>
+        <option>SI</option>
+    </select><br><br>
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea id = "mensagem" name = "mensagem" rows="4"></textarea>
+</div>
+<div id="botoes">
+    <input type="submit" value="Cadastrar">
+    <!-- Botão para enviar o formulário -->
+    <!-- value define o texto exibido no botão -->
+</div>
+</form>
+</div>
+</body>
+</html>
