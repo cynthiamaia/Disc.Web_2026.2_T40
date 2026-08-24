@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exemplo Div e Nav</title>
+
+<style>
+
+/* ===== Seletor por TAG ===== */
+body {
+    font-family: Arial; /*Use a fonte Arial.*/
+    margin: 0; /*Remove a margem padrão do navegador.
+*/
+}
+
+/* ===== Seletor por TAG (nav) ===== */
+nav {
+    background-color: #333;
+    /*  padding: 15px; */
+    margin: 0 auto;
+}
+
+/* ===== Seletor DESCENDENTE ===== */
+nav a { /*Encontre os <a> que estão dentro de um <nav>*/
+    /*filho que está dentro do pai.*/
+    /*uma área de navegação do site.*/
+    color: white;
+    text-decoration: none;
+    margin-right: 60px;
+}
+
+/* ===== Pseudoclasse ===== */
+nav a:hover {
+    color: yellow;
+}
+
+/* ===== Seletor por ID ===== */
+#principal {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* ===== Seletor por CLASSE ===== */
+.card {
+    background-color: white; /*cor de fundo do card.*/
+    padding: 15px; /*cria espaço dentro do elemento. espaço interno.*/
+    margin-bottom: 10px; /*Crie 10 pixels de espaço fora do elemento, na parte de baixo.*/
+    border-left: 5px solid blue;
+}
+
+.card p {
+    color: red;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav> <!--caixa/área que agrupa os links de navegação-->
+    <!--<nav> é uma tag semântica do HTML.-->
+     <!-- significa que a própria tag diz qual é a função daquele conteúdo.-->
+    <a href="#">Home</a> <!--Esses links fazem parte da navegação do site-->
+  <a href="#">Sobre</a>
+    <a href="#">Contato</a>
+</nav>
+
+<!-- DIV PRINCIPAL -->
+<div id="principal">
+    
+    <h1>Bem-vindo ao Site</h1>
+
+    <div class="card">
+        <h2>Card 1</h2>
+        <p>Texto dentro do card 1.</p>
+    </div>
+
+    <div class="card">
+        <h2>Card 2</h2>
+        <p>Texto dentro do card 2.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

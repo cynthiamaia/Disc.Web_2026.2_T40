@@ -10,11 +10,16 @@ label {
 h1 {
     text-align: center;
     color: black;
+    position: relative;
+    top: -50px;
+    /*position: relative; top: -20px → desloca visualmente o h1.*/
 }
 input, textarea {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
+    border: 1px solid #ccc; /*Define a borda do campo.*/
+    border-radius: 4px; /*Deixa os cantos arredondados.*/
+    width: 100%; /*    O campo deve ocupar 100% da largura disponível do elemento pai.*/
+    padding: 8px;
+    /*padding cria um espaço interno entre o conteúdo e a borda.*/
     
 }
 .container {
@@ -22,6 +27,13 @@ input, textarea {
     border-radius: 8px;
     width: 400px;
     margin: 50px auto;
+    padding: 60px; /*cria espaço dentro do container, entre a borda da caixa e o conteúdo. */
+
+}
+
+
+#botoes {
+    margin-top: 40px;
 }
 
 textarea{

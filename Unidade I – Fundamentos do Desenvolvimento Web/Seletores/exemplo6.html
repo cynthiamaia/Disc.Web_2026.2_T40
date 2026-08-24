@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div > p{ /* seletor direto (apenas filhos diretos)*/
+            color: red;
+        }
+        ul > li { /*<li> diretamente dentro de <ul>.*/
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Fica vermelho</p>
+    </div>
+    <div>
+        <span>
+            <p> Nao fica vermelho</p>
+            <!--Não fica vermelho porque o <p> está dentro do <span>. Ele é neto do <div>, não filho direto-->
+        </span>
+    </div>
+    <ul>
+        <li>Elemento 1</li>
+        <li>elemento 2</li>
+        <div>
+            <li>Elemento 3</li>
+        </div>
+    </ul>
+</body>
+</html>
