@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{/*transforma o .container em um Flex Container.*/
+            display: flex;
+            gap:10px;
+        }
+        .box{/*Os flex items são todos os filhos diretos do flex container.*/
+            background-color: #444;
+            width: 100px;
+            height: 100px;
+            color:white;
+            display:flex;
+            justify-content: center;/*horizontal→justify-content*/
+            align-items: center;/*alinhamento dos itens */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+        <div class="box" >D</div>
+   </div>
+</body>
+</html>
+
+<!--
+justify-content
+flex-start	começo
+center	centro
+flex-end	final
+-->
+<!--align-items
+flex-start	começo
+center	centro
+flex-end	final-->

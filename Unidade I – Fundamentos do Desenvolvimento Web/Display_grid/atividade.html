@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr; 
+    gap: 20px;
+    padding: 20px; /*padding = espaço da borda até o conteúdo.*/
+}
+
+        header {
+            background-color: #2c3e50; /*define a cor de fundo do cabecalho */
+            color: white; /* define a cor dos textos */
+            text-align: center; /*centraliza o texto */
+            padding: 20px; /* cria 20 px de espaço entre o conteudo e a borda do header */
+        }
+        nav {
+            background-color: #34495e;/*define a cor de fundo da area de navegacao */
+            text-align: center; /*centraliza o texto */
+            padding: 20px; /*espaço interno */
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        section {
+            background-color: #ecf0f1;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        article {
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-left: 4px solid #3498db;
+        }
+        aside {
+            background-color: #f9e79f;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        body {
+            margin: 0 /* remove a margem padrao que o navegador coloca no body */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Portal Acadêmico</h1>
+        <p>Noticias e Eventos</p>
+    </header>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Noticias</a>
+        <a href="#">Contato</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Noticias</h2>
+            <article>
+                <h3>Nova Biblioteca Digital</h3>
+                <p>A universidade lanõu uma nova plataforma digital.</p>
+            </article>
+            <article>
+                <h3>Semana de Tecnologia</h3>
+                <p>Evento contará com palestras e workshops.</p>
+            </article>
+        </section>
+        <section>
+            <h2>Eventos</h2>
+            <article>
+                <h3>Workshop de IA</h3>
+                <p>Curso prático sobre IA aplicada.</p>
+            </article>
+            <article>
+                <h3>Feira de Estagio</h3>
+                <p>Empresas estarao presentes para recrutamento</p>
+            </article>
+        </section>
+        <aside>
+            <h3>Avisos</h3>
+            <p>Prazo de matricula termina dia 30.</p>
+        </aside>
+    </main>
+    <footer>
+        <p> &copy; 2026 Nome do Aluno</p>
+    </footer>
+</body>
+</html>

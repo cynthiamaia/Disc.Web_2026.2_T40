@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title> Portal Acadêmico - Grid</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /*Remove a margem externa do <body>.*/
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #34495e;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+main {
+    /*O conteúdo dentro do main será organizado usando Grid*/
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px; /*padding = espaço da borda até o conteúdo.*/
+  
+}
+
+section {
+    background-color: #ecf0f1;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+article {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid #3498db;
+}
+
+aside {
+    background-color: #f9e79f;
+    padding: 15px;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Portal Acadêmico</h1>
+    <p>Notícias e Eventos</p>
+</header>
+
+<nav>
+    <a href="#inicio">Início</a> <!--#inicio-->
+    <a href="ex01.html">Notícias</a>
+    <a href="#">Contato</a>
+</nav>
+
+<main>
+
+        <section id="inicio"> <!--id="inicio"-->
+            <h2>Notícias</h2>
+
+            <article>
+                <h3>Nova Biblioteca Digital</h3>
+                <p>A universidade lançou uma nova plataforma digital.</p>
+            </article>
+
+            <article>
+                <h3>Semana da Tecnologia</h3>
+                <p>Evento contará com palestras e workshops.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Eventos</h2>
+
+            <article>
+                <h3>Workshop de IA</h3>
+                <p>Curso prático sobre IA aplicada.</p>
+            </article>
+
+            <article>
+                <h3>Feira de Estágios</h3>
+                <p>Empresas estarão presentes para recrutamento.</p>
+            </article>
+        </section>
+
+    <aside>
+        <h3>Avisos</h3>
+        <p>Prazo de matrícula termina dia 30.</p>
+    </aside>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Nome do Aluno</p>
+</footer>
+
+</body>
+</html>

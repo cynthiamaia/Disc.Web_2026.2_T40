@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin:0;
+            display: grid;
+            height: 100vh;
+            grid-template-areas: 
+            "topo topo"
+            "menu banner"
+            "menu conteudo"
+            "rodape rodape";
+            grid-template-columns: 1fr 4fr;
+        }
+        .topo {
+            background-color: #b7b7b7;
+            grid-area:topo; /*Coloque este elemento na área do Grid chamada topo*/
+            display: grid;/*o próprio .topo vira um Grid Container, controlar o que está dentro do .topo*/
+            align-items: center;/*Alinhe o conteúdo no centro do eixo vertical.*/
+            justify-content: center; /*Coloque o conteúdo no centro horizontalmente.*/
+
+        }
+        .menu {
+            background-color: #cfe2f3;
+            grid-area:menu;         
+        }
+        .banner{
+            background-color: #d9ead3;
+            grid-area:banner;
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .conteudo {
+            background-color: #fff2cc;
+            grid-area:conteudo; 
+                   
+        }
+        .rodape{
+            background-color: #b7b7b7;
+            grid-area: rodape;
+            display: grid;
+            align-items: center;/* centro vertical */
+            justify-content: center;  /* centro horizontal */    
+        }
+        .item{
+            background-color: white;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header class="topo">Topo</header>
+    <nav class="menu">Menu</nav>
+    <section class="banner">
+        <article class="item">Promoçoes</article>
+        <article class="item">Novidades</article>
+        <article class="item">Destaque</article>
+    </section>
+    <section class="conteudo">Conteudo</section>
+    <footer class="rodape">Rodape</footer>
+</body>
+</html>
