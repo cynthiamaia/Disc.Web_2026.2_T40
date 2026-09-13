@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM query selector</title>
+</head>
+<body>
+    <p id="texto">Este é o primeiro paragrafo</p>
+    <p class="paragrafo">Este é o segundo paragrafo</p>
+    <script>
+        let elemento = document.querySelector("#texto")//id
+        //serve para encontrar um elemento usando um seletor CSS.
+        //"Dentro do documento, encontre o primeiro elemento que corresponde ao seletor #texto."
+        console.log(elemento.innerText)
+        let primeirotexto = document.querySelector(".paragrafo")//class
+        console.log(primeirotexto.innerText)
+        let tagselector =  document.querySelector("p") //Retorna apenas o primeiro elemento que corresponde ao seletor.
+        console.log(tagselector.innerText)
+        let tag = document.querySelectorAll("p")//salavra todos pela tag Retorna todos os elementos que correspondem ao seletor.
+        //console.log(tag[0].innerText)
+        //console.log(tag[1].innerText)
+    </script>
+</body>
+</html>

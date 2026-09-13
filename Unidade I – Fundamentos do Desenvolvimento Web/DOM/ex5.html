@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM getelementclassname</title>
+</head>
+<body>
+    <p class="texto">Este é o primeiro paragrafo</p>
+    <p class="texto">Este é o segundo paragrafo</p>
+    <script>
+        let elemento = document.getElementsByClassName("texto");//Procure no documento todos os elementos que possuem a classe texto
+        elemento[0].style.color = "blue" //alterar corPegue o primeiro elemento e altere a cor dele para azul
+        //elemento[0]Pegue o primeiro elemento da coleção.
+        elemento[0].innerText = "Um novo texto"//modificar texto//
+        console.log(elemento[0].innerText);
+        console.log(elemento[1].innerText);
+    </script>
+</body>
+</html>
