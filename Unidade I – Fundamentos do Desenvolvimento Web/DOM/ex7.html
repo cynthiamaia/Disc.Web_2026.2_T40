@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com classes</title>
+     <style>
+      
+        .ativo {
+            background-color: lightgreen;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div id="meudiv" class="caixa">Este é um div.</div>
+    <button onclick="adicionarClasse()">Adicionar Classe</button>
+    <button onclick="removerclasse()">Remover classe</button>
+    <script>
+        function adicionarClasse(){
+            document.getElementById("meudiv").classList.add("ativo")
+            //document.getElementsByClassName("caixa")[0].classList.add("ativo")
+            //classList representa as classes que aquele elemento possui.
+        }
+        function removerclasse(){
+            document.getElementById("meudiv").classList.remove("ativo")
+        }
+    </script>
+</body>
+</html>

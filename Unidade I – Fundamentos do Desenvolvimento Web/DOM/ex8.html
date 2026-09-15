@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlternarClasses</title>
+</head>
+<body>
+    <div id="meudiv" class="caixa">clique no botao para alterar a classe</div>
+    <button onclick="alternarClasses()">Alternar classes</button>
+    <script>
+        function alternarClasses(){
+           let elemento = document.getElementById("meudiv");
+           elemento.classList.toggle("ativo")//Ele funciona como um interruptor:
+           //liga se estiver desligado e desliga se estiver ligado.
+
+        }
+    </script>
+    <style>
+        .caixa {
+            width: 200px;
+            height: 200px;
+            background-color: lightgrey;
+        }
+        .ativo {
+            background-color: lightgreen;
+            border: 2px solid green;
+        }
+    </style>
+</body>
+</html>
+<!--toggle alternar (ligar/desligar)-->
