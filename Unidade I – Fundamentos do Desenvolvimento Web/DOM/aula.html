@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternar Classes</title>
+    <style>
+       .inativo {
+            width: 300px;
+            padding: 20px;
+            background-color: lightgray;
+            border: 2px solid rgb(230, 12, 12);
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+        .ativo {
+            width: 300px;
+            padding: 20px;
+            background-color: lightgreen;
+            border: 2px solid green;
+            color: darkgreen;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }            
+        /*Quando as duas classes definem a mesma propriedade, a regra que aparece por último ganha.*/
+        /*Como as duas regras têm a mesma especificidade (.classe), a regra que aparece por último no CSS vence.*/
+    </style>
+</head>
+<body>
+    <div id="meuDiv" class="inativo">Clique no botão para alterar a classe.</div>
+    <button id="botaoAlternar">Alternar Classe</button>
+
+    <script>
+        //classList mostra as classes que o elemento possui.
+        document.getElementById("botaoAlternar").addEventListener("click", function() {
+            //Adicionando um evento de clique
+            //Quando esse elemento receber um clique, execute esta função
+            let elemento = document.getElementById("meuDiv");//Agora o código procura o elemento que possui: meudiv
+            console.log("Antes do toggle", elemento)
+            console.log("Possui a classe ativo?", elemento.classList.contains("ativo"))//serve para verificar se o elemento possui a classe inativo.
+            elemento.classList.toggle("ativo");//toggle("ativo") não sabe que existe uma classe chamada inativo
+            console.log("Depois:", elemento);
+            console.log(
+                "Possui a classe ativo?",
+                elemento.classList.contains("ativo")
+            );
+            //serve para verificar se o elemento possui a classe ativo.
+        })
+    </script>
+</body>
+</html>

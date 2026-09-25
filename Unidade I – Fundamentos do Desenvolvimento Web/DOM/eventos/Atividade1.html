@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Estilo do Parágrafo</title>
+</head>
+<body>
+    <p id="meuParagrafo">Este parágrafo mudará de estilo ao clicar no botão.</p>
+    <button id="botaoEstilo">Mudar Estilo</button>
+
+    <script>
+        document.getElementById("botaoEstilo").addEventListener("click", function() {
+            let paragrafo = document.getElementById("meuParagrafo");
+            console.log(paragrafo)
+            paragrafo.style.backgroundColor = "yellow";
+            paragrafo.style.color = "red";
+            paragrafo.style.fontSize = "24px";
+        });
+    </script>
+</body>
+</html>

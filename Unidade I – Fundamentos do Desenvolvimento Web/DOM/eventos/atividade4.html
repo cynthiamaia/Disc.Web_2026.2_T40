@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrastar Quadrado</title>
+
+    <style>
+        #quadrado {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            cursor: grab;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="quadrado"></div>
+
+    <script>
+        const quadrado = document.getElementById("quadrado");
+
+        let arrastando = false;
+
+        quadrado.addEventListener("mousedown", function(event) {
+            arrastando = true;
+            quadrado.style.cursor = "grabbing";
+        });
+
+        document.addEventListener("mousemove", function(event) {
+
+            if (arrastando) {
+                quadrado.style.left = event.clientX - 50 + "px";
+                quadrado.style.top = event.clientY - 50 + "px";
+            }
+
+        });
+
+        document.addEventListener("mouseup", function(event) {
+            arrastando = false;
+            quadrado.style.cursor = "grab";
+        });
+    </script>
+
+</body>
+</html>
+

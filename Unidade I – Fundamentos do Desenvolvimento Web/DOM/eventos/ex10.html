@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <button id="botao">Clique aqui</button>
+    <script>
+        document.getElementById("botao").addEventListener("dblclick", function(){
+            //duplo clique.
+            //uma forma diferente de tratar eventos no JavaScript,
+            alert("Botao clicado")
+        })
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--addEventListener → fica "escutando" esperando o clique
+Fique observando esse elemento e, quando determinado evento acontecer, execute uma ação.
+Usuário clica no botão → evento "click" é disparado
+
+Função é executada → mostra o alerta na tela
+tipo do evento()
+"click" → clique
+"mouseover" → passar o mouse
+"keydown" → tecla pressionada
+dblclick -> duplo clique
+function() { ... }
+É a função que será executada quando clicar
+alert('Botao clicado!');
+Mostra uma mensagem na tela
+-->

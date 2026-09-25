@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Imagem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        img {
+            width: 300px;
+            height: auto;
+            margin: 20px 0;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Galeria de Imagens</h2>
+    <img id="minhaImagem" src="/Users/moreira/Desktop/Disc.web_2026.2_T87/Unidade I/DOM/jsimage.png" alt="Imagem inicial" width="300">
+    <br>
+    <button id="botaoImagem">Trocar Imagem</button>
+
+    <script>
+        let imagemTrocada = false;//A variável começa como false
+        document.getElementById("botaoImagem").addEventListener("click", function() {
+            //O usuário clica no botão
+            let imagem = document.getElementById("minhaImagem");//Primeiro ele pega a imagem:
+            
+            if (imagemTrocada == false) { //Se o valor for true, vira false
+                //"A imagemTrocada é igual a false?" A imagem muda.
+                imagem.src = "/Users/moreira/Desktop/Disc.web_2026.2_T87/Unidade I/DOM/image1.png";
+                imagem.alt = "Imagem alterada";
+                imagemTrocada = true;
+            } else {
+                imagem.src = "/Users/moreira/Desktop/Disc.web_2026.2_T87/Unidade I/DOM/image2.png";
+                imagem.alt = "Imagem inicial";
+                imagemTrocada = false;
+            }
+        });
+    </script>
+</body>
+</html>
