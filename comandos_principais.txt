@@ -1,0 +1,9 @@
+Cria um novo projeto usando o Vite -> npm create vite@latest project 
+Instala as dependências do projeto -> npm install
+Executa o projeto em desenvolvimento -> npm run dev
+npm create vite@latest site-com-bootstrap
+npm install
+npm install bootstrap
+instalar Bootstrap IntelliSense->extensao
+npm install firebase
+react-router-dom

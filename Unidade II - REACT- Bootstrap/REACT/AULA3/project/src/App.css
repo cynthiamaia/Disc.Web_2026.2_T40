@@ -1,0 +1,84 @@
+.botao {
+  background: linear-gradient(#4a90e2 0%,
+  #357ab8); /*fundo azul, cria uma transição suave entre duas ou mais cores ao longo de uma linha reta (um eixo linear).*/
+  /*Começa com a cor #4a90e2 (azul claro) na posição 0% (topo)
+  Termina com a cor #357ab8 (azul mais escuro) no final (100%, embaixo)*/
+  color: white; /* texto branco */
+  font-size: 40px; /*tamanho da fonte*/
+  margin-top: 25px;/* espaco acima do botao */
+ 
+}
+#card-destaque {
+  border: 2px solid red;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #ffeaea;
+}
+
+.rodape{
+  grid-area: rodape; 
+  background: linear-gradient(#357ab8 0%, #2a6496 100%);
+  text-align: center; /* centraliza o texto */
+  font-size: 14px; /*tamanho da fonte */
+  color: white; /* texto branco */
+}
+.card {
+  padding: 2.5em; /* espacamento interno */
+  background: linear-gradient(#ffffff 0%,
+   #f7f9fc 100%);
+   border-radius: 12px; /* cantos arredondados */
+   box-shadow: 0 5px 15 px rgba(0,0,0,0.8);
+   /* sombra suave */
+}
+/*efeito houver para o card */
+.card:hover {
+transform: translateY(-5px); /*Este é um efeito de hover (passar o mouse) que move o elemento 5 pixels para cima.
+  transform: translateX(-5px);   move 5px para a ESQUERDA */
+
+
+}
+h2 {
+  color: #4a90e2;
+  margin: 1.2em 0 0.7em 0; /*margim vertical */
+  padding-bottom: 0.4em;
+  border-bottom: 2px dashed #e0e0e0;
+  font-size: 1.8rem
+}
+h1 {
+  color: #f4f6f8; /*cor azul */
+  margin-bottom: 0.8em; /* margens vertical */
+  font-size: 2.2rem; /* tamanho da fonte */
+  text-align: center; /*centralizado */
+}
+.container {
+  display: grid; /* ativa o grid layout */
+  grid-template-areas:
+  "header header"
+  "menu conteudo"
+  "rodape rodape";
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 70px 1fr 50px;
+  min-height:100vh;
+}
+.menu li:hover{
+  background-color: #4a90e2;
+  color: white;
+  transform: translateX(5px) 
+}
+
+.header {
+  background: linear-gradient(90deg, #357ab8 0%,
+             #2a6496 100%);
+  /* cor de fundo azul para o cabecalho */
+  align-items: center;
+  /* alinha itens verticalmente ao centro */
+  grid-area: header;
+  /* posiciona este elemnto na area header definida no grid*/
+  color: white;
+  /* cor do texto branco*/
+}
+body {
+  font-family: "Tahoma";
+  background: linear-gradient(#eef2f5 0%, #d6e4f0 100%);
+  color: #333
+}
