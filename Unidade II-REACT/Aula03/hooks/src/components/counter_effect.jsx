@@ -10,7 +10,7 @@ useEffect(() => {
         },  // função
         [count]); 
         //Quando count mudar, execute esse código// dependência
-
+//Depois de uma renderização, execute esse código quando count mudar.
 return (
         <div>
         <p>Você clicou {count} vezes</p>
