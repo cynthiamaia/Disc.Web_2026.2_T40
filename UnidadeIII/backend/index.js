@@ -1,4 +1,7 @@
 import express from "express";
+import cors from "cors";
+//Os navegadores têm uma política de segurança chamada Same-Origin Policy que bloqueia requisições HTTP entre domínios diferentes. Por exemplo, se seu frontend está em http://localhost:3000 e sua API em http://localhost:5000, o navegador bloquearia essas requisições por padrão.
+//O cors() adiciona os headers necessários para permitir isso:
 import mysql from "mysql2/promise";//Usa o estilo async/await — mais moderno:
 // Conexão com MySQL
 const db = await mysql.createConnection({//criar conexão com o banco MySQ
@@ -10,6 +13,7 @@ const db = await mysql.createConnection({//criar conexão com o banco MySQ
 //Guarda a conexão em uma variável chamada db
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("API com MySQL rodando!");
@@ -41,6 +45,80 @@ app.post("/posts", async (req, res) => {
       error: "Erro interno do servidor"
     });
   }
+});
+//Convenção REST — a URL identifica qual recurso você quer afetar, e o corpo carrega o que mudar:
+app.put("/put/:id", async (req, res) => {
+  try {
+
+    const { id } = req.params;
+
+    const { title, content, author } = req.body;
+
+    await db.execute(
+      "UPDATE autores SET title = ?, content = ?, author = ? WHERE id = ?",
+      [title, content, author, id]
+    );
+
+    res.status(200).json({
+      message: "put atualizado com sucesso"
+    });
+
+  } catch (err) {
+
+    console.error(err);
+
+    res.status(500).json({
+      error: "Erro interno do servidor"
+    });
+
+  }
+});
+app.delete("/delete/:id", async (req, res) => {
+
+  try {
+
+    const { id } = req.params;
+
+    await db.execute(
+      "DELETE FROM autores WHERE id = ?",
+      [id]
+    );
+
+    res.status(200).json({
+      message: "Post deletado com sucesso"
+    });
+
+  } catch (err) {
+
+    console.error(err);
+
+    res.status(500).json({
+      error: "Erro interno do servidor"
+    });
+
+  }
+
+});
+app.get("/buscar", async (req, res) => {
+
+  try {
+
+    const [rows] = await db.execute(//rows é o resultado das linhas retornadas pela consulta SQL.
+      "SELECT * FROM autores"
+    );
+
+    res.json(rows);
+
+  } catch (err) {
+
+    console.log(err);
+
+    res.status(500).json({
+      erro: "Erro no servidor"
+    });
+
+  }
+
 });
 const PORT = 4000;
 

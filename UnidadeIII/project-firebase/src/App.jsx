@@ -3,6 +3,7 @@ import Register from './pages/register'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './pages/login';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import RegisterPost from './pages/livraria';
 //import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 ///React Router para permitir navegação entre diferentes páginas/componentes da aplicação React.
 //BrowserRouter é o componente que gerencia a navegação da aplicação.
@@ -17,6 +18,7 @@ function App() {
       <Routes>
           <Route path="/register" element={<Register/>}/> 
           <Route path="/login" element={<Login />}></Route>
+          <Route path="/register-post" element={<RegisterPost />}></Route>
 
        </Routes>
     </BrowserRouter>
